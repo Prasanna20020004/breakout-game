@@ -21,6 +21,7 @@ screen.onkey(fun=paddle.move_left, key="Left")
 screen.onkey(fun=paddle.move_right, key="Right")
 
 game_on = True
+total_bricks = len(brick.bricks)
 while game_on:
     screen.update()
     time.sleep(0.05)
@@ -41,5 +42,9 @@ while game_on:
             brick.remove(a_brick)
             score.update_score()
             score.display()
+            total_bricks -= 1
+
+    if total_bricks == 0:
+        game_on = False
 
 screen.exitonclick()
