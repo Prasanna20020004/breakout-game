@@ -45,6 +45,7 @@ while game_on:
             total_bricks -= 1
 
     if total_bricks == 0:
+        score.display_end_score()
         game_on = False
 
 screen.exitonclick()

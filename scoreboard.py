@@ -18,3 +18,8 @@ class Score(Turtle):
 
     def update_score(self):
         self.score += 1
+
+    def display_end_score(self):
+        self.clear()  # Clear previous score display
+        self.goto(0, 0)  # Position the turtle to write the score
+        self.write(f"Score: {self.score}", align="center", font=("Courier", 30, "bold"))
