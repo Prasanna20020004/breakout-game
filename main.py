@@ -31,6 +31,7 @@ while game_on:
         ball.bounce_x()
 
     if ball.ycor() < -290:
+        score.display_end_score()
         game_on = False
 
     if ball.distance(paddle) < 25:
